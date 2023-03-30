@@ -1,0 +1,14 @@
+  import numpy as np
+# Create a random vector of size 15 having integers in the range 1-20
+vec = np.random.randint(1, 21, 15)
+arr = vec.reshape(3, 5)
+print("Array Shape:", arr.shape)
+# Replace the maximum value in each row with 0
+arr[np.arange(len(arr)), np.argmax(arr, axis=1)] = 0
+print("Modified Array:\n", arr)
+# Create a 2-dimensional array of size 4 x 3
+arr_2d = np.zeros((4, 3), dtype=np.int32)
+# Print the shape, type, and data type of the array
+print("Array Shape:", arr_2d.shape)
+print("Array Type:", type(arr_2d))
+print("Array Data Type:", arr_2d.dtype)
